@@ -32,8 +32,8 @@ resource "aws_eks_cluster" "dwo-eks-cluster" {
 
   vpc_config {
     subnet_ids = [
-      aws_subnet.private-ap-northeast-1c.id,
-      aws_subnet.private-ap-northeast-1d.id
+      aws_subnet.private-us-east-1a.id,
+      aws_subnet.private-us-east-1b.id
     ]
   }
 

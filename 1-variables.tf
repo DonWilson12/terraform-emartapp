@@ -1,5 +1,5 @@
 variable "aws_region" {
-  default = "ap-northeast-1"
+  default = "us-east-1"
 }
 
 variable "cluster_name" {
@@ -7,9 +7,9 @@ variable "cluster_name" {
 }
 
 variable "AZ1" {
-  default = "ap-northeast-1c"
+  default = "us-east-1a"
 }
 
 variable "AZ2" {
-  default = "ap-northeast-1d"
+  default = "us-east-1b"
 }

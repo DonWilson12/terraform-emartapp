@@ -39,8 +39,8 @@ resource "aws_eks_node_group" "dwo-node-group" {
   instance_types       = ["t3.small"]
 
   subnet_ids = [
-    aws_subnet.private-ap-northeast-1c.id,
-    aws_subnet.private-ap-northeast-1d.id
+    aws_subnet.private-us-east-1a.id,
+    aws_subnet.private-us-east-1b.id
   ]
 
   scaling_config {

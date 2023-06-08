@@ -1,44 +1,44 @@
-resource "aws_subnet" "public-ap-northeast-1c" {
+resource "aws_subnet" "public-us-east-1a" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.0.1.0/24"
   availability_zone       = var.AZ1
   map_public_ip_on_launch = true
   tags = {
-    "Name"                                      = "public-ap-northeast-1c"
+    "Name"                                      = "public-us-east-1a"
     "kubernetes.io/role/elb"                    = "1"
     "kubernetes.io/cluster/${var.cluster_name}" = "shared"
   }
 }
 
-resource "aws_subnet" "public-ap-northeast-1d" {
+resource "aws_subnet" "public-us-east-1b" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.0.2.0/24"
   availability_zone       = var.AZ2
   map_public_ip_on_launch = true
   tags = {
-    "Name"                                      = "public-ap-northeast-1d"
+    "Name"                                      = "public-us-east-1b"
     "kubernetes.io/role/elb"                    = "1"
     "kubernetes.io/cluster/${var.cluster_name}" = "shared"
   }
 }
 
-resource "aws_subnet" "private-ap-northeast-1c" {
+resource "aws_subnet" "private-us-east-1a" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "10.0.3.0/24"
   availability_zone = var.AZ1
   tags = {
-    "Name"                                      = "private-ap-northeast-1c"
+    "Name"                                      = "private-us-east-1a"
     "kubernetes.io/role/internal-elb"           = "1"
     "kubernetes.io/cluster/${var.cluster_name}" = "shared"
   }
 }
 
-resource "aws_subnet" "private-ap-northeast-1d" {
+resource "aws_subnet" "private-us-east-1b" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "10.0.4.0/24"
   availability_zone = var.AZ2
   tags = {
-    "Name"                                      = "private-ap-northeast-1d"
+    "Name"                                      = "private-us-east-1b"
     "kubernetes.io/role/internal-elb"           = "1"
     "kubernetes.io/cluster/${var.cluster_name}" = "shared"
   }
@@ -50,4 +50,3 @@ resource "aws_subnet" "private-ap-northeast-1d" {
 
 # 2 public and private subnets. AWS recommendation for most deployments
 # https://docs.aws.amazon.com/eks/latest/userguide/creating-a-vpc.html
-

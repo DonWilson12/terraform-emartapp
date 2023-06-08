@@ -11,7 +11,7 @@ resource "aws_route_table" "publicRT" {
   }
 }
 
-resource "aws_route_table" "privateRT_1c" {
+resource "aws_route_table" "privateRT_1a" {
   vpc_id = aws_vpc.main.id
 
   route {
@@ -24,7 +24,7 @@ resource "aws_route_table" "privateRT_1c" {
   }
 }
 
-resource "aws_route_table" "privateRT_1d" {
+resource "aws_route_table" "privateRT_1b" {
   vpc_id = aws_vpc.main.id
 
   route {
